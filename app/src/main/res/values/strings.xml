@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">MojitoManager</string>
+	<string name="registerScene">注册设备</string>
+	<string name="locX">%1$f</string>
+	<string name="locY">%1$f</string>
+	<string name="deviceID">设备 ID</string>
+	<string name="deviceLoc">设备位置</string>
+	<string name="registerDevice">注册</string>
+</resources>
