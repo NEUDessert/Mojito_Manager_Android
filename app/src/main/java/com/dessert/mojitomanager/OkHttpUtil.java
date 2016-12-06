@@ -11,11 +11,12 @@ import java.util.List;
 
 /**
  * Created by Lawrence on 2016/11/29.
+ *
  */
 public class OkHttpUtil {
     private OkHttpClient mOkHttpClient;
     private static OkHttpUtil mOkHttpUtil;
-    public final static String DOMAIN = "http://192.168.50.183:8082/Mojito/";
+    public final static String DOMAIN = "http://192.168.0.176:8080/Mojito/";
     private OkHttpUtil() {
         mOkHttpClient = new OkHttpClient.Builder()
                 .cookieJar(new CookieJar() {

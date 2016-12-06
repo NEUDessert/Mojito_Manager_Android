@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class RegisterDeviceActivity extends Activity {
     private double locX, locY;
     private EditText locationText;
     private EditText deviceIdText;
+    private EditText deviceLocationText;
     private static final int SET_LOCATION = 0;
     private static final int REG_SUCCESS = 1;
     private static final int REG_FAIL = 2;
@@ -58,6 +60,7 @@ public class RegisterDeviceActivity extends Activity {
         setContentView(R.layout.layout_register_device);
         locationText = (EditText)findViewById(R.id.location);
         deviceIdText = (EditText)findViewById(R.id.deviceid);
+        deviceLocationText = (EditText)findViewById(R.id.location_text);
     }
     private void getLocation() {
         final AMapLocationClient mapLocationClient;
@@ -86,13 +89,15 @@ public class RegisterDeviceActivity extends Activity {
 
     public void registerDevice(View view) {
         OkHttpClient mOkHttpClient = OkHttpUtil.getInstance().getmOkHttpClient();
+        Log.i("DEVICE", deviceIdText.getText().toString());
         RequestBody body = new FormBody.Builder()
-                .addEncoded("deviceID", deviceIdText.getText().toString())
+                .addEncoded("deviceId", deviceIdText.getText().toString())
                 .addEncoded("locX", locX + "")
                 .addEncoded("locY", locY + "")
+                .addEncoded("location", deviceLocationText.getText().toString())
                 .build();
         final Request request = new Request.Builder()
-                .url("http://localhost:8000")
+                .url(OkHttpUtil.DOMAIN + "institution/addDevice.do")
                 .post(body)
                 .build();
         Call call = mOkHttpClient.newCall(request);

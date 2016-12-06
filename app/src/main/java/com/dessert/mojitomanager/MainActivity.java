@@ -19,9 +19,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mOkHttpClient = OkHttpUtil.getInstance().getmOkHttpClient();
-        setContentView(R.layout.activity_main);
-        insIDView = (TextView)findViewById(R.id.insID);
-        insPasswordView = (TextView)findViewById(R.id.insPassword);
+        setContentView(R.layout.layout);
+        insIDView = (TextView)findViewById(R.id.inst_insid);
+        insPasswordView = (TextView)findViewById(R.id.inst_password);
     }
 
     public void login(View view) {

@@ -6,18 +6,27 @@
 		android:inputType="textPersonName" android:ems="10" android:layout_below="@+id/textView2"
 		android:layout_centerHorizontal="true" android:layout_marginTop="26dp" android:id="@+id/location"
 		android:enabled="false" tools:enabled="false" />
-	<Button android:text="@string/registerDevice" android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:layout_below="@+id/location" android:layout_centerHorizontal="true" android:layout_marginTop="50dp"
-		android:id="@+id/button" android:textSize="16sp" android:onClick="registerDevice" />
 	<EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
 		android:inputType="textPersonName" android:ems="10" android:layout_marginTop="32dp" android:id="@+id/deviceid"
 		android:maxLength="10" android:layout_below="@+id/textView" android:layout_alignStart="@+id/location" />
-	<TextView android:text="@string/deviceLoc" android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:layout_marginTop="37dp"
-		android:id="@+id/textView2" android:textSize="18sp" android:layout_below="@+id/deviceid"
-		android:layout_alignStart="@+id/deviceid" />
 	<TextView android:text="@string/deviceID" android:layout_width="wrap_content" android:layout_height="wrap_content"
 		android:layout_marginTop="58dp"
 		android:id="@+id/textView" android:textSize="18sp" android:layout_alignParentTop="true"
 		android:layout_alignStart="@+id/deviceid" />
+	<Button android:text="@string/registerDevice" android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:id="@+id/button" android:textSize="16sp" android:onClick="registerDevice"
+		android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+		android:layout_marginBottom="50dp" />
+	<TextView android:text="@string/deviceLoc" android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginTop="38dp"
+		android:id="@+id/textView2" android:textSize="18sp" android:layout_below="@+id/deviceid"
+		android:layout_alignStart="@+id/location" />
+	<TextView android:text="@string/deviceLocText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginTop="27dp"
+		android:id="@+id/textView3" android:textSize="18sp" android:layout_below="@+id/location"
+		android:layout_alignStart="@+id/location" />
+	<EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:inputType="textPersonName" android:ems="10" android:id="@+id/location_text"
+		android:layout_below="@+id/textView3" android:layout_alignStart="@+id/textView3"
+		android:layout_marginTop="32dp" />
 </RelativeLayout>
